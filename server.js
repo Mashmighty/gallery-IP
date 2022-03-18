@@ -10,9 +10,11 @@ let image = require('./routes/image');
 // connecting the database
 let mongodb_url = 'mongodb://localhost:27017/';
 let dbName = 'darkroom';
-mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
-    if (err) console.log(err)
-});
+// mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
+//     if (err) console.log(err)
+// });
+const MONGODB_URI = process.env.MONGODB_URI || mongodb_url + dbName;
+mongoose.connect(MONGODB_URI);
 
 // test if the database has connected successfully
 let db = mongoose.connection;
