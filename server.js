@@ -2,33 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-const config = require('./_config');
+// const config = require('./_config');
 
 // Define routes
 let index = require('./routes/index');
 let image = require('./routes/image');
 
-// Initializing the app
-const app = express();
-
 // connecting the database
-<<<<<<< HEAD
-
-const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true  },(err)=>{
-    if (err) {
-        console.log(err)
-    }else{
-        console.log(`Connected to Database: ${MONGODB_URI}`)
-    }
-});
-||||||| c9393a0
-let mongodb_url = 'mongodb://localhost:27017/';
-let dbName = 'darkroom';
-mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
-    if (err) console.log(err)
-});
-=======
 let mongodb_url = 'mongodb://localhost:27017/';
 let dbName = 'darkroom';
 // mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
@@ -36,15 +16,15 @@ let dbName = 'darkroom';
 // });
 const MONGODB_URI = process.env.MONGODB_URI || mongodb_url + dbName;
 mongoose.connect(MONGODB_URI);
->>>>>>> master
 
 // test if the database has connected successfully
-// let db = mongoose.connection;
-// db.once('open', ()=>{
-//     console.log('Database connected successfully')
-// })
+let db = mongoose.connection;
+db.once('open', ()=>{
+    console.log('Database connected successfully')
+})
 
-
+// Initializing the app
+const app = express();
 
 
 // View Engine
