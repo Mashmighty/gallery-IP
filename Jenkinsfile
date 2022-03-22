@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    gradle "Gradle-7"
+    gradle "Gradle-6"
   }
   stages {
     stage('clone repository') {
@@ -25,7 +25,7 @@ pipeline {
       }
     }
     stage('Deploy to Heroku') {
-  steps {
+      steps {
     withCredentials([usernameColonPassword(credentialsId: 'heroku', variable: 'HEROKU_CREDENTIALS' )]){
       sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/mighty-earth-27385.git master'
         }
