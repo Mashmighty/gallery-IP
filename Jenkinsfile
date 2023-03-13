@@ -24,7 +24,7 @@ pipeline {
 
         EMAIL_SUBJECT_FAILURE = "Status: 'FAILURE' -Job \'${env.JOB_NAME}:${env.BUILD_NUMBER}\'" 
 
-        EMAIL_RECEPIENT = 'charles.muli@student.moringaschool.com'
+        EMAIL_RECEPIENT = 'georgesm0101@gmail.com'
 
     }
   tools {
@@ -33,7 +33,7 @@ pipeline {
   stages {
     stage('clone repository') {
       steps {
-        git 'https://github.com/chaxito/gallery.git'
+        git 'https://github.com/Mashmighty/gallery-IP.git'
       }
     }
     stage('Build init') {
