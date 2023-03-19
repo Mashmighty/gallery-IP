@@ -1,6 +1,6 @@
 # Gallery
 
-Render Site Link is https://galleryip-m0pq.onrender.com
+Render Site Link is https://galleryip-uz76.onrender.com
 
 ## Project Description
 
