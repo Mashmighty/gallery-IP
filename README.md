@@ -1,16 +1,14 @@
 # Gallery
 
-Heruko Site Link https://ip1gallery.herokuapp.com/
-
-<!--Project Description  -->
+Render Site Link 
 
 ## Project Description
 
-This project is meant to implement use of Jenkins files and deploying on Heroku.
+This project is meant to implement use of Jenkins files and deploying on render.
 
 ## Setup Instruction
 
-There is no any script required to run the application, however you can visit the <strong>project URL link</strong> [here](https://ip1gallery.herokuapp.com/)
+There is no any script required to run the application.
 
 
 ## Technologies Used
@@ -19,12 +17,10 @@ The program will basically use JavaScript as the programming language and bootst
 
 ## Contact Information
 
-For more information you can contact me via email <span>cmcharels.muli@gmail.com</span>.
+For more information you can contact me via email georgesm0101@gmail.com
 
-## Licence/Copyright
-For licence/copyright information check on the <a href="LICENCE.md"><strong>Licence.md</strong></a> file.
 
-## Credits
-Special appreciation given to Moringa School.
+
+
 
 
