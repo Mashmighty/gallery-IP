@@ -51,10 +51,10 @@ pipeline {
     //     sh 'gradle test'
     //   }
     // }
-    stage('Deploy to Heroku') {
+    stage('Deploy to render') {
       steps {
-    withCredentials([usernameColonPassword(credentialsId: 'heroku', variable: 'HEROKU_CREDENTIALS' )]){
-      sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/ip1gallery.git master'
+    withCredentials([usernameColonPassword(credentialsId: 'render', variable: 'RENDER_CREDENTIALS' )]){
+      sh 'git push https://${RENDER_CREDENTIALS}@git.render.com/galleryip.git master'
         }
       }
     } 
